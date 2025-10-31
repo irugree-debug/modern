@@ -1,0 +1,176 @@
+﻿<head>
+    <meta charset="utf-8">
+    <title>MODERN HUD</title>
+    <meta http-equiv='X-UA=Compatible' content='ie=edge'>
+    <link rel="stylesheet" href="css/hud.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="modern-cefstudio-speed" id="modern-cefstudio-speed" style="visibility: visible;">
+        <div class="speed-bg">
+            <svg class="speed" xmlns="http://www.w3.org/2000/svg" viewBox="12 0 200 167" stroke-linecap="round">
+                <path class="speed-meter-bg" d="M41 149.5a77 77 0 1 1 117.93 0" fill="none" stroke-dasharray="4" />
+                <path id="speed-meter" class="speed-meter" d="M41 149.5a77 77 0 1 1 117.93 0" fill="none" style="stroke-dasharray: 624.295, 504.295; stroke-dashoffset: 625;" />
+            </svg>
+            <div class="speed-content">
+                <div id="speed-count" class="speed-count">200</div>
+                <div class="speed-kmh">КМ/Ч</div>
+            </div>
+            <div class="arrow-icon">
+                <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="17" height="10" viewBox="0 0 17 12" fill="none">
+                    <path id="left-arrow" class="left-arrow-anim" d="M6.09319 12V7.2H16.9634L17 4.788H6.09319V0L0 6L6.09319 12Z" fill="white" />
+                </svg>
+                <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="17" height="10" viewBox="0 0 17 12" fill="none">
+                    <path id="right-arrow" class="right-arrow-anim" d="M10.9068 -5.32684e-07L10.9068 4.8L0.0365607 4.8L4.1858e-07 7.212L10.9068 7.212L10.9068 12L17 6L10.9068 -5.32684e-07Z" fill="white" />
+                </svg>
+            </div>
+            <div class="odometr-block">
+                <div id="speed-odometer" class="speed-odometer">000248</div>
+                <svg class="odometr-icon" xmlns="http://www.w3.org/2000/svg" width="44" height="2" viewBox="0 0 44 2" fill="none">
+                    <path d="M1 1H43" stroke="white" stroke-opacity="0.26" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div class="info-block">
+                <div id="speed-fuel" class="fuel-count">
+                    <svg class="fuel-icon" width="11" height="20" viewBox="0 0 17 20" fill="none">
+                        <path d="M0 0H3C3.28 0 3.53 0.115789 3.71 0.305263L5.79 2.50526L6.59 1.67368C7 1.26316 7.5 1.05263 8 1.05263H14C14.5 1.05263 15 1.26316 15.41 1.67368L16.41 2.72632C16.8 3.1579 17 3.68421 17 4.21053V17.8947C17 18.4531 16.7893 18.9886 16.4142 19.3834C16.0391 19.7782 15.5304 20 15 20H5C4.46957 20 3.96086 19.7782 3.58579 19.3834C3.21071 18.9886 3 18.4531 3 17.8947V11.5789V10.5263V6.31579C3 5.78947 3.2 5.26316 3.59 4.83158L4.38 3.98947L2.59 2.10526H0V0ZM8 3.15789V5.26316H14V3.15789H8ZM8.41 9.47368L6.41 7.36842H5V8.85263L7 10.9579V14.3053L5 16.4105V17.8947H6.41L8.41 15.7895H11.59L13.59 17.8947H15V16.4105L13 14.3053V10.9579L15 8.85263V7.36842H13.59L11.59 9.47368H8.41ZM9 11.5789H11V13.6842H9V11.5789Z" fill="#383838" />
+                    </svg>
+                    0л
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modern-cefstudio" class="modern-cefstudio" style="visibility: visible; ">
+        <div class="top-logo-block">
+            <img class="server-logo" src="icon/modern-project.svg">
+            <div class="time-block">
+                <div class="time">
+                    <svg class="time-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <circle cx="7" cy="7" r="6.5" stroke="white" />
+                        <path d="M9 9L7 7" stroke="white" stroke-linecap="round" />
+                        <path d="M7.5 4C7.5 3.72386 7.27614 3.5 7 3.5C6.72386 3.5 6.5 3.72386 6.5 4L7.5 4ZM6.5 4L6.5 7L7.5 7L7.5 4L6.5 4Z" fill="white" />
+                    </svg>
+                    <div id="time">23:00</div>
+                </div>
+                <div class="data">
+                    <div id="data">27.12.2023</div>
+                </div>
+            </div>
+            <div class="player-info-block">
+                <div id="s1" class="player-nick">-</div>
+                <div id="s2" class="player-id">-</div>
+            </div>
+        </div>
+        <div class="weapon-block">
+            <div id="weapon">
+                <svg class="weapon-png" style="top: -17px; right: -16px;" xmlns="http://www.w3.org/2000/svg" width="85" height="85" viewBox="0 0 97 97" fill="none">
+                    <circle cx="48.5" cy="48.5" r="48.25" fill="black" fill-opacity="0.23" stroke="url(#paint0_linear_43_39)" stroke-width="0.5" />
+                    <defs>
+                        <linearGradient id="paint0_linear_43_39" x1="48.5" y1="0" x2="48.5" y2="97" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="white" />
+                            <stop offset="1" stop-color="white" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <img id="weapon_id" class="weapon-png" src="icon/weapon/gun_0.png" width="55" alt="gun">
+                <div id="weapon_ammo" class="weapon-ammo"></div>
+            </div>
+        </div>
+        <div class="progress-bar-block">
+            <div id="health-bar">
+                <img class="bar-icon" src="icon/hp.svg">
+                <div id="b1" class="bar-indicator">0</div>
+            </div>
+            <div id="armour-bar">
+                <img class="bar-icon" src="icon/armour.svg">
+                <div id="b3" class="bar-indicator">0</div>
+            </div>
+        </div>
+        <div class="money-block">
+            <div id="s3" class="money"><img src="icon/cash.svg" style="width: 23px; margin-top: -5px; margin-right: 8px;">15 249 724</div>
+        </div>
+    </div>
+    <style>
+body { background: transparent; color: transparent; overflow: hidden; user-select: none; overflow-y: hidden; overflow-x: hidden; }
+</style>
+<script>
+document.ondragstart = test;
+document.onselectstart = test;
+document.oncontextmenu = test;
+document.oncontextmenu;
+function test() {
+    return false;
+}
+cef.emit("game:hud:setComponentVisible", "interface", false);
+cef.emit("game:data:pollPlayerStats", true, 50);
+cef.on("game:data:playerStats", (hp, max_hp, arm, breath, wanted, weapon, ammo, max_ammo, money, speed) => {
+    document.getElementById('b1').innerHTML = Math.round(hp);
+    document.getElementById('b3').innerHTML = Math.round(arm);
+    document.getElementById('s3').innerHTML = `<img src="icon/cash.svg" style="width: 23px; margin-top: -5px; margin-right: 8px;">${formatt(money)}`;
+
+    var weaponID = weapon;
+    var weaponAmmo = '';
+
+    if (weaponID !== '0') {
+        weaponAmmo = `${ammo}/${(max_ammo - ammo)}`;
+    }
+
+    speed_count = Math.round(speed);
+    document.getElementById("speed-count").innerHTML = `${speed_count}`;
+
+    let meter_count = 838 + speed * 2.2;
+    document.getElementById("speed-meter").style = `stroke-dasharray: 838; stroke-dashoffset: -${meter_count};`;
+
+    document.getElementById('weapon_id').src = `icon/weapon/gun_${weaponID}.png`;
+    document.getElementById('weapon_ammo').innerHTML = weaponAmmo;
+});
+
+function formatt(i) {
+    var text_fmt = `${i}`;
+    var text_tmp = text_fmt;
+    var text_len = text_fmt.length;
+
+    var dots_count = 0;
+
+    for (var idx = 0; idx < (text_len - 1); idx++) {
+        if (text_tmp[idx] == '.') {
+            continue;
+        }
+
+        if (((text_len - (idx + 1)) % 3) == 0) {
+            dots_count++;
+
+            text_tmp = text_tmp.slice(0, idx + dots_count) + '.' + text_tmp.slice(idx + dots_count);
+        }
+    }
+
+    return text_tmp;
+}
+cef.on("modern:hud:visible", (type) => {
+    if (type == 0) {
+        document.getElementById('modern-cefstudio').style.visibility = 'hidden';
+        is_open_hud = true;
+    }
+    if (type == 1) {
+        document.getElementById('modern-cefstudio').style.visibility = 'visible';
+        is_open_hud = false;
+    }
+});
+
+cef.on("modern:hud:update", (s1, s2) => {
+    document.getElementById('s1').innerHTML = `${s1}`;
+    document.getElementById('s2').innerHTML = `${s2}`;
+});
+
+cef.on("modern:speed:visible", () => {
+    document.getElementById('modern-cefstudio-speed').style.visibility = 'visible';
+});
+
+cef.on("modern:speed:hidden", () => {
+    document.getElementById('modern-cefstudio-speed').style.visibility = 'hidden';
+});
+
+</script>
+    <script src="js/time.js"></script>
+    <script src="js/script.js"></script>
+</body>
