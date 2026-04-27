@@ -115,13 +115,13 @@ cef.on("game:data:playerStats", (hp, max_hp, arm, breath, wanted, weapon, ammo, 
         weaponAmmo = `${ammo}/${(max_ammo - ammo)}`;
     }
 
-    speed_count = Math.round(speed);
-    document.getElementById("speed-count").innerHTML = `${speed_count}`;
+    let real_speed = speed * 1.396; 
+    document.getElementById("speed-count").innerHTML = Math.round(real_speed);
 
     
-    let meter_offset = 625 - (speed * 2.81);
+    let meter_offset = 625 - (real_speed * 2.81);
     if (meter_offset < 0) meter_offset = 0;
-    document.getElementById("speed-meter").style = `stroke-dasharray: 838; stroke-dashoffset: ${meter_count};`;
+    document.getElementById("speed-meter").style.strokeDashoffset = meter_offset;
 
     document.getElementById('weapon_id').src = `icon/weapon/gun_${weaponID}.png`;
     document.getElementById('weapon_ammo').innerHTML = weaponAmmo;
