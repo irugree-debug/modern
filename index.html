@@ -119,8 +119,9 @@ cef.on("game:data:playerStats", (hp, max_hp, arm, breath, wanted, weapon, ammo, 
     document.getElementById("speed-count").innerHTML = `${speed_count}`;
 
     
-    let meter_count = 838 + speed * 2.81;
-    document.getElementById("speed-meter").style = `stroke-dasharray: 838; stroke-dashoffset: -${meter_count};`;
+    let meter_offset = 625 - (speed * 2.81);
+    if (meter_offset < 0) meter_offset = 0;
+    document.getElementById("speed-meter").style = `stroke-dasharray: 838; stroke-dashoffset: ${meter_count};`;
 
     document.getElementById('weapon_id').src = `icon/weapon/gun_${weaponID}.png`;
     document.getElementById('weapon_ammo').innerHTML = weaponAmmo;
