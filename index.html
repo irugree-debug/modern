@@ -166,7 +166,21 @@ cef.on("modern:hud:update", (s1, s2) => {
 cef.on("modern:speed:visible", () => {
     document.getElementById('modern-cefstudio-speed').style.visibility = 'visible';
 });
+// Слушаем событие modern:hud:updateData, которое ты прописал в моде
+cef.on("modern:hud:updateData", (name, id) => {
+    // Находим блок ника по его ID (s1) и записываем имя
+    const nickElement = document.getElementById('s1');
+    if (nickElement) {
+        nickElement.innerText = name;
+    }
 
+    // Находим блок ID по его ID (s2) и записываем номер игрока
+    const idElement = document.getElementById('s2');
+    if (idElement) {
+        idElement.innerText = id;
+    }
+});
+    
 cef.on("modern:speed:hidden", () => {
     document.getElementById('modern-cefstudio-speed').style.visibility = 'hidden';
 });
