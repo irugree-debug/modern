@@ -64,6 +64,10 @@
                     <div id="data">27.12.2023</div>
                 </div>
             </div>
+            <div class="player-info-block">
+                <div id="s1" class="player-nick">-</div>
+                <div id="s2" class="player-id">-</div>
+            </div>
         </div>
         <div class="weapon-block">
             <div id="weapon">
@@ -119,10 +123,10 @@ cef.on("game:data:playerStats", (hp, max_hp, arm, breath, wanted, weapon, ammo, 
         weaponAmmo = `${ammo}/${(max_ammo - ammo)}`;
     }
 
-    speed_count = Math.round(speed * 1.4);
+    speed_count = Math.round(speed);
     document.getElementById("speed-count").innerHTML = `${speed_count}`;
 
-    let meter_count = 838 + speed * 1.58;
+    let meter_count = 838 + speed * 2.2;
     document.getElementById("speed-meter").style = `stroke-dasharray: 838; stroke-dashoffset: -${meter_count};`;
 
     document.getElementById('weapon_id').src = `icon/weapon/gun_${weaponID}.png`;
