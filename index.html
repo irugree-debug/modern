@@ -123,10 +123,10 @@ cef.on("game:data:playerStats", (hp, max_hp, arm, breath, wanted, weapon, ammo, 
         weaponAmmo = `${ammo}/${(max_ammo - ammo)}`;
     }
 
-    speed_count = Math.round(speed);
+    speed_count = Math.round(speed * 1.4);
     document.getElementById("speed-count").innerHTML = `${speed_count}`;
 
-    let meter_count = 838 + speed * 2.81;
+    let meter_count = 838 + speed * 1.58;
     document.getElementById("speed-meter").style = `stroke-dasharray: 838; stroke-dashoffset: -${meter_count};`;
 
     document.getElementById('weapon_id').src = `icon/weapon/gun_${weaponID}.png`;
