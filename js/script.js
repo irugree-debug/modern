@@ -62,3 +62,14 @@ cef.on("modern:speed:update", (odometer_val, gas_val) => {
         </svg> 
         ${Math.round(gas_val)} л.`;
 });
+
+cef.on('hud:update:playerinfo', (playername, playerid) => {
+    // Находим элемент ника и вставляем значение
+    if(document.getElementById('s1')) {
+        document.getElementById('s1').innerText = `${playername}`;
+    }
+    // Находим элемент ID и вставляем значение
+    if(document.getElementById('s2')) {
+        document.getElementById('s2').innerText = `${playerid}`;
+    }
+});
